@@ -1,6 +1,6 @@
 # Heatmap Calendar (with Seasons)
 
-The heatmap calendar with season is a perfect homepage for your Obsidian setup. It tracks and displays your most productive and least productive days in a heatmap calendar. Some people might know it as GitHub style calendar.
+The heatmap calendar (with seasons) is a perfect homepage for your Obsidian setup. It tracks and displays your most productive and least productive days in a heatmap calendar. Some people might know it as GitHub style calendar.
 
 > **Fun Fact:** The most productive color for a season is the least productive color for the next season. `"#66CC4E"` in the Winter/Spring Reset (Quarter 1) is the first color in the Summer Surge quarter (Quarter 2).
 
