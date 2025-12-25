@@ -17,6 +17,10 @@ In `const activities = []`, you can edit the following:
 
 You can change or modify the headers and other UI as per your liking.
 
+## New Features
+
+- You can now hover over a particular cell and it will display the icons/emojis of the activities you did on that particular day. It will also show you the amount of activities you did on that day.
+
 ## Screenshots
 
 ![Q1](preview/Q1.png)
