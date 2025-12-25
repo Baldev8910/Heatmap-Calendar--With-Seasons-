@@ -19,7 +19,8 @@ You can change or modify the headers and other UI as per your liking.
 
 ## New Features
 
-- You can now hover over a particular cell and it will display the icons/emojis of the activities you did on that particular day. It will also show you the amount of activities you did on that day. ![v.1.1](preview/preview_v.1.1.png)
+- **1.1.1**
+You can now hover over a particular cell and it will display the icons/emojis of the activities you did on that particular day. It will also show you the amount of activities you did on that day. ![1.1.1](preview/preview_v.1.1.png)
 
 ## Screenshots
 
@@ -27,3 +28,8 @@ You can change or modify the headers and other UI as per your liking.
 ![Q2](preview/Q2.png)
 ![Q3](preview/Q3.png)
 ![Q3](preview/Q4.png)
+
+## Versions
+
+- 1.1.1 - 25 December, 2025
+- 1.1.0 - November, 2025
