@@ -19,7 +19,7 @@ You can change or modify the headers and other UI as per your liking.
 
 ## Screenshots
 
-![Q1](Q1.png)
-![Q2](Q2.png)
-![Q3](Q3.png)
-![Q3](Q4.png)
+![Q1](preview/Q1.png)
+![Q2](preview/Q2.png)
+![Q3](preview/Q3.png)
+![Q3](preview/Q4.png)
