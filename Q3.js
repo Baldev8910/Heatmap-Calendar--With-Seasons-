@@ -91,6 +91,7 @@ const activities = [
     { source: '"01 Daily Journal"', field: 'GTG', emoji: '🏋️‍♂️', color: 'lightgreen' },
     { source: '"01 Daily Journal"', field: 'waterPlants', emoji: '🪴', color: 'pink' },
     { source: '"01 Daily Journal"', field: 'Research', emoji: '📑', color: 'lightgreen' },
+    { source: '"01 Daily Journal"', field: 'AcaResearch', emoji: '📄', color: 'lightgreen' },
     { source: '"06 Readings"', field: 'Reading', emoji: '📖', color: 'yellow' },
     { source: '"01 Daily Journal"', field: 'Study', emoji: '📚', color: 'orangeToRed' },
     { source: '"03 Guitar Practice"', field: 'Guitar', emoji: '🎸', color: 'green' },
@@ -125,6 +126,75 @@ for (let date in activitiesByDate) {
 // ========================================
 
 renderHeatmapCalendar(this.container, calendarData)
+
+// ========================================
+// Hover Tooltip for Activities
+// ========================================
+
+const tooltip = dv.el("div", "", {
+    attr: {
+        style: `
+            position: fixed;
+            display: none;
+            background: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+            border-radius: 8px;
+            padding: 12px;
+            max-width: 300px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            pointer-events: none;
+            text-align: center;
+        `
+    }
+})
+
+document.body.appendChild(tooltip)
+
+// Add hover listeners after calendar renders
+setTimeout(() => {
+    const cells = this.container.querySelectorAll('[data-date], .day, .calendar-day')
+    
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', (e) => {
+            const date = cell.dataset.date || cell.getAttribute('data-date') || cell.title
+            
+            if (!date) return
+            
+            // Check if there are activities for this date
+            if (activitiesByDate[date]) {
+                const data = activitiesByDate[date]
+                
+                tooltip.innerHTML = `
+                    <div style="font-size: 0.85em; color: var(--text-muted); margin-bottom: 8px;">
+                        ${date}
+                    </div>
+                    <div style="font-size: 2em; letter-spacing: 0.2em;">
+                        ${data.emojis.join(" ")}
+                    </div>
+                    <div style="font-size: 0.8em; color: var(--text-muted); margin-top: 8px;">
+                        ${data.count} activit${data.count === 1 ? 'y' : 'ies'}
+                    </div>
+                `
+                tooltip.style.display = 'block'
+                tooltip.style.left = (e.pageX + 10) + 'px'
+                tooltip.style.top = (e.pageY + 10) + 'px'
+            }
+        })
+        
+        cell.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none'
+        })
+        
+        // Optional: Move tooltip with mouse
+        cell.addEventListener('mousemove', (e) => {
+            if (tooltip.style.display === 'block') {
+                tooltip.style.left = (e.pageX + 10) + 'px'
+                tooltip.style.top = (e.pageY + 10) + 'px'
+            }
+        })
+    })
+}, 500)
 
 // ========================================
 // Today's Activities Section
