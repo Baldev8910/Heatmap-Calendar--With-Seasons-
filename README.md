@@ -21,7 +21,7 @@ You can change or modify the headers and other UI as per your liking.
   
 ## 🎄 Christmas Edition
 
-<video src="preview/xmas25.mp4" width="500" autoplay loop muted playsinline></video>
+
 
 The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Snowflakes fall gently and disappear automatically after a short time.
 
