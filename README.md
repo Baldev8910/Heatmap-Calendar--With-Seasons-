@@ -18,6 +18,16 @@ In `const activities = []`, you can edit the following:
 You can change or modify the headers and other UI as per your liking.
 
 ---
+  
+## 🎄 Christmas Edition
+
+<video src="preview/xmas25.mp4" width="500" autoplay loop muted playsinline></video>
+
+The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Snowflakes fall gently and disappear automatically after a short time.
+
+You can control the intensity using `const SNOWFLAKE_COUNT`. For best performance and a distraction-free experience, keeping it **around 5 is recommended**. I personally use 1.
+
+---
 
 ## New Features
 
