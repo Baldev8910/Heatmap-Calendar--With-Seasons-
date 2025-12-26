@@ -33,7 +33,7 @@ You can control the intensity using const SNOWFLAKE_COUNT. For best performance 
 
 If you want to just add the snowflakes to your note, you can copy the code from `// Snow Animation` to `document.body.appendChild(snowContainer);` and then paste it above `// Calendar Configuation`. This way you keep your existing customization and activities.
 
-Just paste the entire `xmas25.js` in your note and switch the note to `Reading view` for quick setup.
+Or to test the snowflakes, just paste the entire `xmas25.js` in your note and switch the note to `Reading view`.
 
 If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
 
