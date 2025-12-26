@@ -21,11 +21,13 @@ You can change or modify the headers and other UI as per your liking.
   
 ## 🎄 Christmas Edition
 
-![Christmas demo](preview/xmas.gif)
+![Christmas demo](preview/xmas25.gif)
 
 The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Snowflakes fall gently and disappear automatically after a short time.
 
-You can control the intensity using `const SNOWFLAKE_COUNT`. For best performance and a distraction-free experience, keeping it **around 5 is recommended**. I personally use 1.
+You can control the intensity using const SNOWFLAKE_COUNT. For best performance and a distraction-free experience, keeping it **around 5 is recommended** (I personally use 1).
+
+If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
 
 ---
 
