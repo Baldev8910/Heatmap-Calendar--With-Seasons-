@@ -31,6 +31,8 @@ The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Sn
 
 You can control the intensity using const SNOWFLAKE_COUNT. For best performance and a distraction-free experience, keeping it **around 5 is recommended** (I personally use 5 too). The amount used in the video and GIF is 10.
 
+If you want to just add the snowflakes to your note, you can copy the code from `// Snow Animation` to `document.body.appendChild(snowContainer);` and then paste it above `// Calendar Configuation`. This way you keep your existing customization and activities.
+
 Just paste the entire `xmas25.js` in your note and switch the note to `Reading view` for quick setup.
 
 If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
