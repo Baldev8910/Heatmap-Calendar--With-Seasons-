@@ -8,6 +8,10 @@ It requires Dataview and [Heatmap Calendar](https://github.com/Richardsl/heatmap
 
 I have a lot of activities in a day, so my colour palette is huge (10 colours). You can shorten it as per your preferences or use cases.
 
+**How to Use?**
+
+Just paste the code you like in your note starting from ` ```dataviewjs ` and end it with ` ``` `.
+
 In `const activities = []`, you can edit the following:
 
 - `source` = folder where your daily notes are saved
@@ -30,8 +34,6 @@ You can control the intensity using const SNOWFLAKE_COUNT. For best performance 
 Just paste the entire `xmas25.js` in your note and switch the note to `Reading view` for quick setup.
 
 If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
-
----
 
 ## New Features
 
