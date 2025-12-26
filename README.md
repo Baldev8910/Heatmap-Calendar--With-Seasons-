@@ -25,7 +25,7 @@ You can change or modify the headers and other UI as per your liking.
 
 The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Snowflakes fall gently and disappear automatically after a short time.
 
-You can control the intensity using const SNOWFLAKE_COUNT. For best performance and a distraction-free experience, keeping it **around 5 is recommended** (I personally use 1). The amount used in the video and GIF is 10.
+You can control the intensity using const SNOWFLAKE_COUNT. For best performance and a distraction-free experience, keeping it **around 5 is recommended** (I personally use 5 too). The amount used in the video and GIF is 10.
 
 Just paste the entire `xmas25.js` in your note and switch the note to `Reading view` for quick setup.
 
