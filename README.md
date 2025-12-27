@@ -35,6 +35,8 @@ If you want to just add the snowflakes to your note, you can copy the code from 
 
 Or to test the snowflakes, just paste the entire `xmas25.js` in your note and switch the note to `Reading view`.
 
+**Important:** You can even paste the snippet as a separate DataviewJS code, and it will work perfectly.
+
 If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
 
 ## New Features
