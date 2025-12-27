@@ -3,6 +3,8 @@
 // October - December 2025
 // ========================================
 
+const journalFormat = "YYYY-MM-DD"
+
 // Header
 const header = dv.el("div", "", {
     attr: {
@@ -41,133 +43,12 @@ header.appendChild(
     })
 )
 
-// ========================================
-// Snowfall Animation
-// ========================================
-
-// Clean up any existing snowfall
-const existingSnow = document.querySelector('.snow-container');
-if (existingSnow) {
-    existingSnow.querySelectorAll('.snowflake').forEach(flake => {
-        flake.style.opacity = 0;
-    });
-    setTimeout(() => existingSnow.remove(), 800); // Time out for snowflakes in milliseconds
-}
-
-const style = document.createElement('style'); // snowflakes shape and style
-style.textContent = `
-    @keyframes snowfall {
-        0% {
-            transform: translateY(-20px) translateX(0) rotate(0deg);
-        }
-        100% {
-            transform: translateY(calc(100vh + 20px)) translateX(100px) rotate(360deg);
-        }
-    }
-    
-    @keyframes sway {
-        0%, 100% {
-            margin-left: 0;
-        }
-        50% {
-            margin-left: 50px;
-        }
-    }
-    
-    .snowflake {
-        position: fixed;
-        top: -20px;
-        width: 10px;
-        height: 10px;
-        background: white;
-        border-radius: 50%;
-        pointer-events: none;
-        opacity: 0.8;
-        box-shadow: 
-            0 0 3px rgba(255, 255, 255, 0.8),
-            0 0 6px rgba(255, 255, 255, 0.6),
-            0 0 10px rgba(255, 255, 255, 0.4);
-    }
-    
-    .snowflake::before,
-    .snowflake::after {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: white;
-        border-radius: 50%;
-        box-shadow: inherit;
-    }
-    
-    .snowflake::before {
-        top: -3px;
-        left: 3px;
-        width: 6px;
-        height: 6px;
-    }
-    
-    .snowflake::after {
-        top: 3px;
-        left: -3px;
-        width: 6px;
-        height: 6px;
-    }
-`;
-document.head.appendChild(style);
-
-const snowContainer = dv.el("div", "", {
-    attr: {
-        class: "snow-container", 
-        style: `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            overflow: visible;
-        `
-    }
-});
-
-const SNOWFLAKE_COUNT = 5; // Keep 5 or single digit for better performace and less lag
-
-// Create N snowflakes with staggered spawn
-for (let i = 0; i < SNOWFLAKE_COUNT; i++) {
-    setTimeout(() => {
-        const size = Math.random() * 8 + 4;
-        const duration = Math.random() * 8 + 7;
-        const delay = Math.random() * duration * 1.5;
-
-        const snowflake = dv.el("div", "", {
-            attr: {
-                class: "snowflake",
-                style: `
-                    left: ${Math.random() * 100}%;
-                    width: ${size}px;
-                    height: ${size}px;
-                    opacity: ${Math.random() * 0.5 + 0.3};
-                    animation: snowfall ${duration}s linear infinite,
-                               sway ${Math.random() * 4 + 3}s ease-in-out infinite;
-                    animation-delay: -${delay}s, ${Math.random() * 2}s;
-                `
-            }
-        });
-
-        snowContainer.appendChild(snowflake);
-    }, i * 300); // stagger spawn for smooth density change
-}
-
-document.body.appendChild(snowContainer);
-
 // =======================
 // Calendar Configuration
 // =======================
 
 const calendarData = {
-    year: 2025,
+    year: 2025, // change the year
     colors: {
         multi: [
     "#FFFFFF", "#FFE5E5", "#FFCCCC", "#FFB3B3",
@@ -188,14 +69,8 @@ const calendarData = {
 // ========================================
 
 const activitiesByDate = {}
-const today = moment().format("YYYY-MM-DD")
+const today = moment().format(journalFormat)
 
-/**
- * Add an activity to a specific date
- * @param {string} date - Date in YYYY-MM-DD format
- * @param {string} emoji - Activity emoji
- * @param {string} color - Activity color (unused but kept for compatibility)
- */
 function addActivity(date, emoji, color) {
     if (!activitiesByDate[date]) {
         activitiesByDate[date] = { count: 0, emojis: [] }

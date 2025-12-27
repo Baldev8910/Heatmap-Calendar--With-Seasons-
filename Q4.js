@@ -3,6 +3,8 @@
 // October - December 2025
 // ========================================
 
+const journalFormat = "YYYY-MM-DD"
+
 // Header
 const header = dv.el("div", "", {
     attr: {
@@ -64,7 +66,7 @@ const calendarData = {
 // ========================================
 
 const activitiesByDate = {}
-const today = moment().format("YYYY-MM-DD")
+const today = moment().format(journalFormat)
 
 /**
  * Add an activity to a specific date

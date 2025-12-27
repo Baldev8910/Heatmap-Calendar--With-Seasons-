@@ -39,7 +39,11 @@ Or to test the snowflakes, just paste the entire `xmas25.js` in your note and sw
 
 If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
 
-## New Features
+## Changelog
+
+- **1.1.2**
+
+You can now set a global `journalFormat` as per your preference. It can be `YYYY-MM-DD` (which is the default) or `DD-MM-YY` as some people might prefer to store their notes.
 
 - **1.1.1**
 
