@@ -266,24 +266,14 @@ if (activitiesByDate[today]) {
 }
 
 // ========================================
-// Snowfall Animation 
+// Snowfall Animation (DataviewJS-safe)
 // ========================================
 
 const ENABLE_SNOW = true;
 
-/* ---------- FADE CLEANUP (ALWAYS RUNS) ---------- */
-const existingSnow = document.querySelector(".snow-container");
-
-if (existingSnow) {
-    existingSnow.querySelectorAll(".snowflake").forEach(flake => {
-        flake.style.opacity = "0";
-    });
-
-    setTimeout(() => {
-        existingSnow.remove();
-        document.querySelector("#snow-style")?.remove();
-    }, 800);
-}
+// HARD STOP — ALWAYS RUNS
+document.querySelectorAll(".snow-container").forEach(el => el.remove());
+document.querySelectorAll("#snow-style").forEach(el => el.remove());
 
 /* ---------- CREATE ONLY IF ENABLED ---------- */
 if (ENABLE_SNOW) {
@@ -292,75 +282,75 @@ if (ENABLE_SNOW) {
     const style = document.createElement("style");
     style.id = "snow-style";
     style.textContent = `
-@keyframes snowfall {
-    0% {
-        transform: translateY(-20px) translateX(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(calc(100vh + 20px)) translateX(100px) rotate(360deg);
-    }
-}
-
-@keyframes sway {
-    0%, 100% { margin-left: 0; }
-    50% { margin-left: 50px; }
-}
-
-.snowflake {
-    position: fixed;
-    top: -20px;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0.8;
-    box-shadow: 
-        0 0 3px rgba(255, 255, 255, 0.8),
-        0 0 6px rgba(255, 255, 255, 0.6),
-        0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-.snowflake::before,
-.snowflake::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: inherit;
-}
-
-.snowflake::before {
-    top: -3px;
-    left: 3px;
-    width: 6px;
-    height: 6px;
-}
-
-.snowflake::after {
-    top: 3px;
-    left: -3px;
-    width: 6px;
-    height: 6px;
-}
-`;
+	@keyframes snowfall {
+	    0% {
+	        transform: translateY(-20px) translateX(0) rotate(0deg);
+	    }
+	    100% {
+	        transform: translateY(calc(100vh + 20px)) translateX(100px) rotate(360deg);
+	    }
+	}
+	
+	@keyframes sway {
+	    0%, 100% { margin-left: 0; }
+	    50% { margin-left: 50px; }
+	}
+	
+	.snowflake {
+	    position: fixed;
+	    top: -20px;
+	    width: 10px;
+	    height: 10px;
+	    background: white;
+	    border-radius: 50%;
+	    pointer-events: none;
+	    opacity: 0.8;
+	    box-shadow: 
+	        0 0 3px rgba(255, 255, 255, 0.8),
+	        0 0 6px rgba(255, 255, 255, 0.6),
+	        0 0 10px rgba(255, 255, 255, 0.4);
+	}
+	
+	.snowflake::before,
+	.snowflake::after {
+	    content: '';
+	    position: absolute;
+	    width: 10px;
+	    height: 10px;
+	    background: white;
+	    border-radius: 50%;
+	    box-shadow: inherit;
+	}
+	
+	.snowflake::before {
+	    top: -3px;
+	    left: 3px;
+	    width: 6px;
+	    height: 6px;
+	}
+	
+	.snowflake::after {
+	    top: 3px;
+	    left: -3px;
+	    width: 6px;
+	    height: 6px;
+	}
+	`;
     document.head.appendChild(style);
 
-    // ----- CONTAINER -----
-    const snowContainer = dv.el("div", "", {
-        attr: {
-            class: "snow-container",
-            style: `
-                position: fixed;
-                inset: 0;
-                pointer-events: none;
-                z-index: 9999;
-                overflow: visible;
-            `
-        }
-    });
+// ----- CONTAINER -----
+const snowContainer = dv.el("div", "", {
+	attr: {
+		class: "snow-container",
+		style: `
+			position: fixed;
+			inset: 0;
+			pointer-events: none;
+			z-index: 9999;
+			overflow: visible;
+		`
+	}
+});
 
 const SNOWFLAKE_COUNT = 5; // Keep 5 or single digit for better performace and less lag
 
