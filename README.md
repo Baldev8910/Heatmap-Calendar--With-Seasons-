@@ -25,6 +25,8 @@ You can change or modify the headers and other UI as per your liking.
   
 ## 🎄 Christmas Edition
 
+**I made a huge mistake and forgot to attach the code for snowflakes below the `xmas25.js`. I have attached the code now. You can use the snippet independently too.**
+
 ![Christmas demo](preview/xmas25.gif)
 
 The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Snowflakes fall gently and disappear automatically after a short time.
