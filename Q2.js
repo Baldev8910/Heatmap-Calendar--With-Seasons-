@@ -45,7 +45,7 @@ header.appendChild(
 
 // Calendar Configuration
 const calendarData = {
-    year: 2025,
+    year: new Date().getFullYear(), // automatic year changing
     colors: {
         multi: [
             "#66CC4E", "#7ED63F", "#96DF32", "#AFE726", 
@@ -66,7 +66,7 @@ const calendarData = {
 // ========================================
 
 const activitiesByDate = {}
-const today = moment().format(journalFormat)
+const today = moment().format("YYYY-MM-DD")
 
 /**
  * Add an activity to a specific date
@@ -105,7 +105,15 @@ const activities = [
 // Collect all activities
 for (let activity of activities) {
     for (let page of dv.pages(activity.source).where(p => p[activity.field])) {
-        addActivity(page.file.name, activity.emoji, activity.color)
+        // Extract only the date part from filename (DD-MM-YY format)
+        const filename = page.file.name
+        const dateMatch = filename.match(/\d{2}-\d{2}-\d{2}/)
+        const dateOnly = dateMatch ? dateMatch[0] : filename
+        
+        // Convert DD-MM-YY to YYYY-MM-DD for calendar
+        const calendarDate = moment(dateOnly, journalFormat).format("YYYY-MM-DD")
+        
+        addActivity(calendarDate, activity.emoji, activity.color)
     }
 }
 
@@ -202,7 +210,7 @@ setTimeout(() => {
 // Today's Activities Section
 // ========================================
 
-const formattedDate = moment(today).format("dddd, MMMM DD, YYYY")
+const formattedDate = moment().format("dddd, MMMM DD, YYYY")
 
 const todaySection = dv.el("div", "", {
     attr: {

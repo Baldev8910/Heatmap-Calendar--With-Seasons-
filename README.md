@@ -45,6 +45,10 @@ If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the previ
 
 ## Changelog
 
+- **1.1.3**
+
+The calendar will now change the years automatically. I have updated `year: 2025,` to `year: new Date().getFullYear(),`. Update is made for all seasons and Christmas Edition.
+
 - **1.1.2**
 
 You can now set a global `journalFormat` as per your preference. It can be `YYYY-MM-DD` (which is the default) or `DD-MM-YY` as some people might prefer to store their notes.

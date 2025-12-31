@@ -48,13 +48,13 @@ header.appendChild(
 // =======================
 
 const calendarData = {
-    year: 2025, // change the year
+    year: new Date().getFullYear(), // automatic year changing
     colors: {
         multi: [
-    "#FFFFFF", "#FFE5E5", "#FFCCCC", "#FFB3B3",
-    "#FF9999", "#FF8080", "#FF6666", "#FF4D4D",
-    "#FF3333", "#FF0000"
-]
+            "#FFFFFF", "#FFE5E5", "#FFCCCC", "#FFB3B3",
+            "#FF9999", "#FF8080", "#FF6666", "#FF4D4D",
+            "#FF3333", "#FF0000"
+        ]
     },
     showCurrentDayBorder: true,
     defaultEntryIntensity: 1,
@@ -69,7 +69,7 @@ const calendarData = {
 // ========================================
 
 const activitiesByDate = {}
-const today = moment().format(journalFormat)
+const today = moment().format("YYYY-MM-DD")
 
 function addActivity(date, emoji, color) {
     if (!activitiesByDate[date]) {
@@ -96,13 +96,21 @@ const activities = [
     { source: '"03 Guitar Practice"', field: 'Guitar', emoji: '🎸', color: 'green' },
     { source: '"04 Learning Python"', field: 'Python', emoji: '🐍', color: 'red' },
     { source: '"01 Daily Journal"', field: 'Gaming', emoji: '🏎️', color: 'brown' },
-    { source: '"01 Daily Journal"', field: 'DJournal', emoji: '🖥️', color: 'pink' }
+    { source: '"01 Daily Journal"', field: 'DJournal', emoji: '🖥️', color: 'pink' },
 ]
 
 // Collect all activities
 for (let activity of activities) {
     for (let page of dv.pages(activity.source).where(p => p[activity.field])) {
-        addActivity(page.file.name, activity.emoji, activity.color)
+        // Extract only the date part from filename (DD-MM-YY format)
+        const filename = page.file.name
+        const dateMatch = filename.match(/\d{2}-\d{2}-\d{2}/)
+        const dateOnly = dateMatch ? dateMatch[0] : filename
+        
+        // Convert DD-MM-YY to YYYY-MM-DD for calendar
+        const calendarDate = moment(dateOnly, journalFormat).format("YYYY-MM-DD")
+        
+        addActivity(calendarDate, activity.emoji, activity.color)
     }
 }
 
@@ -152,24 +160,11 @@ document.body.appendChild(tooltip)
 
 // Add hover listeners after calendar renders
 setTimeout(() => {
-    // DEBUG: Check what elements exist
-    const cells = this.container.querySelectorAll('svg rect, [data-date], .day, .calendar-day')
-    console.log('Found cells:', cells.length)
+    const cells = this.container.querySelectorAll('[data-date], .day, .calendar-day')
     
     cells.forEach(cell => {
-        // DEBUG: Log cell attributes
-        console.log('Cell attributes:', cell.dataset, cell.getAttribute('data-date'), cell.title)
-        
         cell.addEventListener('mouseenter', (e) => {
-            // Try multiple ways to get the date
-            const date = cell.dataset.date || 
-                        cell.getAttribute('data-date') || 
-                        cell.getAttribute('date') ||
-                        cell.title ||
-                        cell.getAttribute('aria-label')
-            
-            console.log('Hovering date:', date)
-            console.log('Activities for date:', activitiesByDate[date])
+            const date = cell.dataset.date || cell.getAttribute('data-date') || cell.title
             
             if (!date) return
             
@@ -205,13 +200,13 @@ setTimeout(() => {
             }
         })
     })
-}, 1000) // Increased timeout
+}, 500)
 
 // ========================================
 // Today's Activities Section
 // ========================================
 
-const formattedDate = moment(today).format("dddd, MMMM DD, YYYY")
+const formattedDate = moment().format("dddd, MMMM DD, YYYY")
 
 const todaySection = dv.el("div", "", {
     attr: {
