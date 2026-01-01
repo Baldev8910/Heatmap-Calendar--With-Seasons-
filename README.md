@@ -29,35 +29,6 @@ The New Year Edition (`NYE2026`) bring you new colours for calendar and a stylis
 
 ![nye2026](preview/nye2026.png)
 
-### Color Palette
-
-<table>
-  <tr>
-    <td style="background:#FFFFFF;width:48px;height:48px;"></td>
-    <td style="background:#E6F2FF;width:48px;height:48px;"></td>
-    <td style="background:#CCE5FF;width:48px;height:48px;"></td>
-    <td style="background:#99CCFF;width:48px;height:48px;"></td>
-    <td style="background:#6699CC;width:48px;height:48px;"></td>
-    <td style="background:#4D7AA8;width:48px;height:48px;"></td>
-    <td style="background:#1A5490;width:48px;height:48px;"></td>
-    <td style="background:#003366;width:48px;height:48px;"></td>
-    <td style="background:#B8860B;width:48px;height:48px;"></td>
-    <td style="background:#FFD700;width:48px;height:48px;"></td>
-  </tr>
-  <tr>
-    <td align="center"><code>#FFFFFF</code></td>
-    <td align="center"><code>#E6F2FF</code></td>
-    <td align="center"><code>#CCE5FF</code></td>
-    <td align="center"><code>#99CCFF</code></td>
-    <td align="center"><code>#6699CC</code></td>
-    <td align="center"><code>#4D7AA8</code></td>
-    <td align="center"><code>#1A5490</code></td>
-    <td align="center"><code>#003366</code></td>
-    <td align="center"><code>#B8860B</code></td>
-    <td align="center"><code>#FFD700</code></td>
-  </tr>
-</table>
-
 ## 🎄 Christmas Edition
 
 **I made a huge mistake and forgot to attach the code for snowflakes below the `xmas25.js`. I have attached the code now. You can use the snippet independently too.**
