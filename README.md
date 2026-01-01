@@ -29,6 +29,35 @@ The New Year Edition (`NYE2026`) bring you new colours for calendar and a stylis
 
 ![nye2026](preview/nye2026.png)
 
+### Color Palette
+
+<table>
+  <tr>
+    <td style="background:#FFFFFF;width:48px;height:48px;"></td>
+    <td style="background:#E6F2FF;width:48px;height:48px;"></td>
+    <td style="background:#CCE5FF;width:48px;height:48px;"></td>
+    <td style="background:#99CCFF;width:48px;height:48px;"></td>
+    <td style="background:#6699CC;width:48px;height:48px;"></td>
+    <td style="background:#4D7AA8;width:48px;height:48px;"></td>
+    <td style="background:#1A5490;width:48px;height:48px;"></td>
+    <td style="background:#003366;width:48px;height:48px;"></td>
+    <td style="background:#B8860B;width:48px;height:48px;"></td>
+    <td style="background:#FFD700;width:48px;height:48px;"></td>
+  </tr>
+  <tr>
+    <td align="center"><code>#FFFFFF</code></td>
+    <td align="center"><code>#E6F2FF</code></td>
+    <td align="center"><code>#CCE5FF</code></td>
+    <td align="center"><code>#99CCFF</code></td>
+    <td align="center"><code>#6699CC</code></td>
+    <td align="center"><code>#4D7AA8</code></td>
+    <td align="center"><code>#1A5490</code></td>
+    <td align="center"><code>#003366</code></td>
+    <td align="center"><code>#B8860B</code></td>
+    <td align="center"><code>#FFD700</code></td>
+  </tr>
+</table>
+
 ## 🎄 Christmas Edition
 
 **I made a huge mistake and forgot to attach the code for snowflakes below the `xmas25.js`. I have attached the code now. You can use the snippet independently too.**
@@ -50,6 +79,10 @@ Or to test the snowflakes, just paste the entire `xmas25.js` in your note and sw
 If the GIF feels laggy, you can check the higher-quality xmas25.mp4 in the preview folder.
 
 ## Changelog
+
+- **1.1.4**
+
+I have now uploaded `autoSwitch.js`. This will auto-switch the colours and headers depending on the quarters of the year. This includes all the default `Q1.js`, `Q2.js`, `Q3.js`, and `Q4.js`. You can even include the Christmas and New Year Edition themes in `autoSwitch`.
 
 - **1.1.3**
 
@@ -76,6 +109,7 @@ You can now hover over a particular cell and it will display the icons/emojis of
 
 ## Versions
 
+- 1.1.4 - 1 January, 2026
 - 1.1.3 - 31 December, 2025
 - 1.1.1 - 25 December, 2025
 - 1.1.0 - November, 2025
