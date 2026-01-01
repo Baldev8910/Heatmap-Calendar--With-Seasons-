@@ -76,5 +76,6 @@ You can now hover over a particular cell and it will display the icons/emojis of
 
 ## Versions
 
+- 1.1.3 - 31 December, 2025
 - 1.1.1 - 25 December, 2025
 - 1.1.0 - November, 2025
