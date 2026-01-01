@@ -25,7 +25,7 @@ You can change or modify the headers and other UI as per your liking.
 
 ## 🥂 New Year Edition
 
-The New Year Edition bring you new colours for calendar and a stylish header. You can couple this with [Global Fireworks](https://github.com/Baldev8910/global-fireworks) for the best experience.
+The New Year Edition (`NYE2026`) bring you new colours for calendar and a stylish header. You can couple this with [Global Fireworks](https://github.com/Baldev8910/global-fireworks) for the best experience.
 
 ![nye2026](preview/nye2026.png)
 
