@@ -22,7 +22,13 @@ In `const activities = []`, you can edit the following:
 You can change or modify the headers and other UI as per your liking.
 
 ---
-  
+
+## 🥂 New Year Edition
+
+The New Year Edition bring you new colours for calendar and a stylish header. You can couple this with [Global Fireworks](https://github.com/Baldev8910/global-fireworks) for the best experience.
+
+![nye2026](preview/nye2026.png)
+
 ## 🎄 Christmas Edition
 
 **I made a huge mistake and forgot to attach the code for snowflakes below the `xmas25.js`. I have attached the code now. You can use the snippet independently too.**
