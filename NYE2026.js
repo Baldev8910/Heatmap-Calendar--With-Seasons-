@@ -1,6 +1,5 @@
 // ========================================
-// Q4 Winter Lock-In - Christmas Edition
-// October - December 2025
+// NEW YEAR EVE 2026
 // ========================================
 
 const journalFormat = "YYYY-MM-DD"
