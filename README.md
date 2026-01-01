@@ -67,7 +67,9 @@ You can now set a global `journalFormat` as per your preference. It can be `YYYY
 
 - **1.1.1**
 
-You can now hover over a particular cell and it will display the icons/emojis of the activities you did on that particular day. It will also show you the amount of activities you did on that day. ![1.1.1](preview/preview_1.1.1.png)
+You can now hover over a particular cell and it will display the icons/emojis of the activities you did on that particular day. It will also show you the amount of activities you did on that day. 
+
+![1.1.1](preview/preview_1.1.1.png)
 
 ---
 
