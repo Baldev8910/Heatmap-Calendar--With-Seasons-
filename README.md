@@ -29,6 +29,8 @@ The New Year Edition (`NYE2026`) bring you new colours for calendar and a stylis
 
 ![nye2026](preview/nye2026.png)
 
+---
+
 ## 🎄 Christmas Edition
 
 **I made a huge mistake and forgot to attach the code for snowflakes below the `xmas25.js`. I have attached the code now. You can use the snippet independently too.**
