@@ -8,6 +8,10 @@ It requires Dataview and [Heatmap Calendar](https://github.com/Richardsl/heatmap
 
 I have a lot of activities in a day, so my colour palette is huge (10 colours). You can shorten it as per your preferences or use cases.
 
+This are the default quarterly themes:
+
+![default themes](preview/default_themes.png)
+
 ## How to Use?
 
 Just paste the code you like in your note starting from ` ```dataviewjs ` and end it with ` ``` `.
