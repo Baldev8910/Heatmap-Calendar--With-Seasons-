@@ -33,6 +33,10 @@ The New Year Edition (`NYE2026`) bring you new colours for calendar and a stylis
 
 ![nye2026](preview/nye2026.png)
 
+The New Year Edition 2026 Theme Palette:
+
+![nye2026](preview/new_year_2026_theme_palette.png)
+
 ---
 
 ## 🎄 Christmas Edition
@@ -40,6 +44,10 @@ The New Year Edition (`NYE2026`) bring you new colours for calendar and a stylis
 **I made a huge mistake and forgot to attach the code for snowflakes below the `xmas25.js`. I have attached the code now. You can use the snippet independently too.**
 
 ![Christmas demo](preview/xmas25.gif)
+
+The Christmas Edition 2025 Theme Palette:
+
+![xmas2025](preview/xmas_theme_palette.png)
 
 The Christmas Edition adds a subtle snowfall effect to your Obsidian desktop. Snowflakes fall gently and disappear automatically after a short time.
 
